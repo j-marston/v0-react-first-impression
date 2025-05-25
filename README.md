@@ -12,7 +12,7 @@ ReactとSSG（Static Site Generation）について紹介する1ページ型の�
 
 ## 🚀 デモ
 
-[Live Demo](https://your-username.github.io/react-first-impression/)
+[Live Demo](https://j-marston.github.io/v0-react-first-impression/)
 
 ## 📋 ページ構成
 
@@ -65,20 +65,20 @@ ReactとSSG（Static Site Generation）について紹介する1ページ型の�
 ### インストール
 
 1. リポジトリをクローン
-\`\`\`bash
+```bash
 git clone https://github.com/your-username/react-first-impression.git
 cd react-first-impression
-\`\`\`
+```
 
 2. 依存関係をインストール
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 3. 開発サーバーを起動
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 4. ブラウザで \`http://localhost:3000\` を開く
 
@@ -87,9 +87,10 @@ npm run dev
 ### GitHub Pagesへのデプロイ
 
 1. 静的ファイルをビルド
-\`\`\`bash
+```bash
 npm run build
-\`\`\`
+touch ./docs/.nojekyll
+```
 
 2. \`out\` フォルダの内容をGitHub Pagesにデプロイ
 
@@ -97,7 +98,7 @@ npm run build
 
 \`.github/workflows/deploy.yml\` を作成して自動デプロイを設定:
 
-\`\`\`yaml
+```yaml
 name: Deploy to GitHub Pages
 
 on:
@@ -127,11 +128,11 @@ jobs:
       with:
         github_token: \${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
-\`\`\`
+```
 
 ## 📁 プロジェクト構造
 
-\`\`\`
+```
 react-first-impression/
 ├── app/
 │   ├── globals.css
@@ -144,7 +145,7 @@ react-first-impression/
 ├── tailwind.config.ts
 ├── package.json
 └── README.md
-\`\`\`
+```
 
 ## ⚙️ 設定ファイル
 
@@ -162,7 +163,7 @@ react-first-impression/
 ### グリッチエフェクトの調整
 \`components/glitch-text.tsx\` でアニメーションのタイミングや色を変更可能:
 
-\`\`\`typescript
+```typescript
 // アニメーション間隔を変更（現在: 3秒）
 const interval = setInterval(() => {
   // ...
@@ -170,18 +171,18 @@ const interval = setInterval(() => {
 
 // グリッチ色を変更
 textShadow: "2px 0 #ff0000, -2px 0 #00ffff, 0 2px #ffff00"
-\`\`\`
+```
 
 ### 出力フォルダ名の変更
 \`next.config.mjs\` で \`distDir\` を変更:
 
-\`\`\`javascript
+```javascript
 const nextConfig = {
   // ...
   distDir: 'docs', // GitHub Pages用
   // ...
 }
-\`\`\`
+```
 
 ## 📱 レスポンシブ対応
 
@@ -191,29 +192,13 @@ const nextConfig = {
 
 ## 🔧 開発用コマンド
 
-\`\`\`bash
+```bash
 npm run dev          # 開発サーバー起動
 npm run build        # 本番用ビルド
 npm run start        # 本番サーバー起動（SSGでは不要）
 npm run lint         # ESLintチェック
-\`\`\`
-
-## 📄 ライセンス
-
-MIT License
-
-## 🤝 コントリビューション
-
-1. このリポジトリをフォーク
-2. 機能ブランチを作成 (\`git checkout -b feature/amazing-feature\`)
-3. 変更をコミット (\`git commit -m 'Add some amazing feature'\`)
-4. ブランチにプッシュ (\`git push origin feature/amazing-feature\`)
-5. プルリクエストを作成
-
-## 📞 サポート
-
-質問や問題がある場合は、[Issues](https://github.com/your-username/react-first-impression/issues) を作成してください。
+```
 
 ---
 
-**Built with ❤️ using React, Next.js, and Tailwind CSS**
+**Built with using React, Next.js, and Tailwind CSS**
